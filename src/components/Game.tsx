@@ -1,16 +1,28 @@
 import Board from "./Board";
 import { useState } from "react";
 
+
+
 export default function Game() {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
   const [xIsNext, setXIsNext] = useState(true);
 
+  //useSate - react hook
+  // Arrays in JS
+  //JS Objects
+  
+
   const current = history[history.length - 1];
 
   const winner = calculateWinner(current.squares);
-  if (winner != null) {
-    alert(winner);
+  let status;
+  if (winner) {
+    status = "Winner " +winner;
   }
+  /*else{
+    status = "Draw"
+  }*/
+  
 
   const currentPlayer = xIsNext ? "X" : "O";
 
@@ -59,6 +71,12 @@ export default function Game() {
     <>
       <p>Current player: {currentPlayer}</p>
       <Board squares={current.squares} boardClick={handleSquareClick} />
+
+      <div className="game-info">
+          <div>{status}</div>
+        </div>
+
     </>
+    
   );
 }
