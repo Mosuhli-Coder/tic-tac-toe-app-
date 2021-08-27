@@ -1,15 +1,19 @@
 import React from "react";
 import Square from "./Square";
 import "./Board.css";
+import "../App.css";
 
 interface BoardProps {
   squares: string[];
   boardClick: (index: number) => void;
 }
-
+//What is an Interface
+// arrow function
+// react props
+// ClickListner
 export default function Board({ boardClick, squares }: BoardProps) {
   return (
-    <div>
+    <div className="App">
       <div className="board">
         <div className="row">
           <Square value={squares[0]} index={0} clickListener={boardClick} />

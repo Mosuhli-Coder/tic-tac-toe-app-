@@ -5,7 +5,6 @@ interface SquareProps {
   index: number;
   clickListener: (index: number) => void;
 }
-
 export default function Square({ value, index, clickListener }: SquareProps) {
   function handleClick() {
     clickListener(index);
@@ -14,7 +13,7 @@ export default function Square({ value, index, clickListener }: SquareProps) {
   return (
     <div>
       <button className="square" onClick={handleClick}>
-        {value}
+        {value} 
       </button>
     </div>
   );
