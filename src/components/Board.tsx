@@ -7,10 +7,6 @@ interface BoardProps {
   squares: string[];
   boardClick: (index: number) => void;
 }
-//What is an Interface
-// arrow function
-// react props
-// ClickListner
 export default function Board({ boardClick, squares }: BoardProps) {
   return (
     <div className="App">
