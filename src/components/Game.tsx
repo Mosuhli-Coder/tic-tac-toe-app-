@@ -46,7 +46,7 @@ export default function Game() {
   function handleSquareClick(index: number) {
     const newSquares = [...current.squares];
     newSquares[index] = currentPlayer;
-    // Update histry
+    // Update history
     setHistory((previouseState) =>
       previouseState.concat([{ squares: newSquares }])
     );
