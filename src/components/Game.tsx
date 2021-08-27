@@ -7,11 +7,6 @@ export default function Game() {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
   const [xIsNext, setXIsNext] = useState(true);
 
-  //useSate - react hook
-  // Arrays in JS
-  //JS Objects
-  
-
   const current = history[history.length - 1];
 
   const winner = calculateWinner(current.squares);
@@ -19,10 +14,6 @@ export default function Game() {
   if (winner) {
     status = "Winner " +winner;
   }
-  /*else{
-    status = "Draw"
-  }*/
-  
 
   const currentPlayer = xIsNext ? "X" : "O";
 
